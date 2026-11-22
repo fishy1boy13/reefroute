@@ -1,0 +1,5 @@
+include LICENSE README.md reefroute.example.toml
+recursive-include systemd *.service *.timer
+recursive-include tests *.py
+exclude BRIEF.md PROGRESS.md STATUS.md CHANGELOG.md
+exclude *.log .jane_state.json

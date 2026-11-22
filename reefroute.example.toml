@@ -1,0 +1,26 @@
+# All costs are fictional integer microcredits per dispatched request.
+database = "usage.sqlite"
+
+[providers.demo]
+kind = "echo"
+request_microcredits = 100
+
+# Optional compatible JSON API. Base URL must include its API version prefix.
+# [providers.remote]
+# kind = "compatible"
+# base_url = "https://api.example.invalid/v1"
+# key_env = "REEFROUTE_PROVIDER_KEY"
+# request_microcredits = 200
+
+[callers.demo]
+token_env = "REEFROUTE_DEMO_TOKEN"
+daily_cap_microcredits = 200
+providers = ["demo"]
+
+[routes.sample]
+provider = "demo"
+model = "echo-text"
+
+[alerts]
+kind = "stdout"
+# To use a webhook: kind = "webhook", url_env = "REEFROUTE_WEBHOOK_URL"

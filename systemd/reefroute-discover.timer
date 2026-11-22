@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily ReefRoute catalog discovery
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+Unit=reefroute-discover.service
+
+[Install]
+WantedBy=timers.target

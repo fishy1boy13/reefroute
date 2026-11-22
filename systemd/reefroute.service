@@ -1,0 +1,20 @@
+[Unit]
+Description=ReefRoute text router
+After=network.target
+
+[Service]
+Type=simple
+User={{USER}}
+WorkingDirectory={{INSTALL_DIR}}
+EnvironmentFile={{INSTALL_DIR}}/credentials.env
+ExecStart={{INSTALL_DIR}}/.venv/bin/reefroute --config {{INSTALL_DIR}}/reefroute.toml serve
+Restart=on-failure
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths={{INSTALL_DIR}}
+
+[Install]
+WantedBy=multi-user.target

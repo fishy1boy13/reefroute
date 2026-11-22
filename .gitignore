@@ -13,3 +13,15 @@ PROGRESS.md
 .jane_state.json
 jane_run.log
 supervisor.log
+reefroute.toml
+*.bak*
+*.sqlite-*
+credentials.env
+.coverage
+.pytest-tmp/
+*.log
+*.env
+.env.*
+*.sqlite3
+*.sqlite3-*
+data/
