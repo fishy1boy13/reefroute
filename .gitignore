@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+.pytest_cache/
+build/
+dist/
+*.sqlite
+*.db
+.env
+BRIEF.md
+PROGRESS.md
+.jane_state.json
+jane_run.log
+supervisor.log
